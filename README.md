@@ -2,6 +2,7 @@
 
 [![docker-k8s-quake3-server-ci](https://github.com/HeyyMrDJ/docker-k8s-quake3-server/actions/workflows/docker-image.yml/badge.svg)](https://github.com/HeyyMrDJ/docker-k8s-quake3-server/actions/workflows/docker-image.yml)
 
+
 # docker-k8s-quake3-server
 Repo for building quake3 docker image along with docker, docker-compose, and kubernetes manifests.
 
