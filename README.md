@@ -1,6 +1,7 @@
 ![example workflow](https://github.com/github/docs/actions/workflows/docker-image.yml/badge.svg)
 ![example event parameter](https://github.com/github/docs/actions/workflows/docker-image.yml/badge.svg?event=push)
 ![example workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
+[![Actions Status](https://github.com/HeyyMrDJ/docker-k8s-quake3-server/workflows/docker-image.yml/badge.svg)]
 
 
 # docker-k8s-quake3-server
