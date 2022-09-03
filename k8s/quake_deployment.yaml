@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: quake3-deployment
+  labels:
+    app.kubernetes.io/name: quake3
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: quake3
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: quake3
+    spec:
+      containers:
+      - name: quake3
+        image: ghcr.io/heyymrdj/docker-k8s-quake3:latest
+        ports:
+        - containerPort: 27960
+          protocol: UDP
+        volumeMounts:
+          - name: pak0
+            mountPath: /home/ioq3srv/baseq3/pak0.pk3
+      volumes:
+        - name: pak0
+          hostPath:
+            path: {{PAK0}}
+            type: File
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: quake3-service
+  labels:
+    app.kubernetes.io/name: quake3
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 27960
+    targetPort: 27960
+    protocol: UDP
+  selector:
+    app.kubernetes.io/name: quake3
