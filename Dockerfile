@@ -15,8 +15,9 @@ RUN \
   echo "###### FINISHED BUILDING ##################" 
 
 FROM alpine:latest
+LABEL org.opencontainers.image.source="https://github.com/HeyyMrDJ/docker-k8s-quake3-server"
 RUN adduser ioq3srv -D
-RUN echo "test4"
+RUN echo "test6"
 COPY --from=builder /ioq3/build/release-linux-x86_64 /home/ioq3srv
 COPY ./docker-quake3.sh /home/ioq3srv/baseq3/docker-quake3.sh
 COPY ./docker-quake3.cfg /home/ioq3srv/baseq3/docker-quake3.cfg

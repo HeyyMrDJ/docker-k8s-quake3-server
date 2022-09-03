@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  quake3:
+    image: ghcr.io/heyymrdj/docker-k8s-quake3:latest
+    ports:
+      - "27960:27960/udp"
+    volumes:
+      - ${PAK0}:/home/ioq3srv/baseq3/pak0.pk3
