@@ -1,4 +1,4 @@
-[![Actions Status](https://github.com/HeyyMrDJ/docker-k8s-quake3-server/workflows/docker-image.yml/badge.svg)](https://github.com/HeyyMrDJ/docker-k8s-quake3-server/actions)
+[![Actions Status](https://github.com/HeyyMrDJ/docker-k8s-quake3-server/workflows/docker-k8s-quake3-server-ci/badge.svg)](https://github.com/HeyyMrDJ/docker-k8s-quake3-server/actions)
 
 
 # docker-k8s-quake3-server
