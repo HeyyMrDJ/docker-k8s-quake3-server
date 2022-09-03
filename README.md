@@ -24,6 +24,7 @@ I created everything myself, but the work of [jberrenberg](https://github.com/jb
 
   ```Markdown
   # Deploy
+  git clone https://github.com/HeyyMrDJ/docker-k8s-quake3-server && cd docker-k8s-quake3-server
   export PAK0=/PATH/TO/YOUR/pak0.pk3
   docker-compose up
 
@@ -35,6 +36,7 @@ I created everything myself, but the work of [jberrenberg](https://github.com/jb
 
   ```Markdown
   # Deploy
+  git clone https://github.com/HeyyMrDJ/docker-k8s-quake3-server && cd docker-k8s-quake3-server
   export PAK0=/PATH/TO/YOUR/pak0.pk3
   cat k8s/quake_deployment.yaml| sed s+{{PAK0}}+$(echo $PAK0)+g | kubectl create -f -
 
