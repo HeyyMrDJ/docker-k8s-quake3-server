@@ -8,6 +8,7 @@ I created everything myself, but the work of [jberrenberg](https://github.com/jb
 # Quickstart - Docker
 
   ```Markdown
+  # Deploy
   export PAK0=/PATH/TO/YOUR/pak0.pk3
   docker run -it -p 27960:27960/udp -v ${PAK0}:/home/ioq3srv/baseq3/pak0.pk3 --name quake3 ghcr.io/heyymrdj/docker-k8s-quake3:latest 
 
@@ -19,6 +20,7 @@ I created everything myself, but the work of [jberrenberg](https://github.com/jb
 # Quickstart - Docker-compose
 
   ```Markdown
+  # Deploy
   export PAK0=/PATH/TO/YOUR/pak0.pk3
   docker-compose up
 
@@ -29,6 +31,7 @@ I created everything myself, but the work of [jberrenberg](https://github.com/jb
 # Quickstart - Kubernetes
 
   ```Markdown
+  # Deploy
   export PAK0=/PATH/TO/YOUR/pak0.pk3
   cat k8s/quake_deployment.yaml| sed s+{{PAK0}}+$(echo $PAK0)+g | kubectl create -f -
 
